@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace SBS_CSharpTask.model
+namespace SBS_CSharpTask.Model.Product
 {
-    class ItemImpl : Item
+    public class ItemImpl : Item
     {
-
-        //private static char ATTR_SEP = File;
+        private readonly string ATTR_SEP = ";";
         private string barcode;
         private string productName;
         private int quantity;
@@ -24,29 +23,37 @@ namespace SBS_CSharpTask.model
             this.category = category;
         }
 
-        public string getBarcode()
+        public string GetBarcode()
         {
             return this.barcode;
         }
 
-        public ItemCategory getCategory()
+        public ItemCategory GetCategory()
         {
             return this.category;
         }
 
-        public string getName()
+        public string GetName()
         {
             return this.productName;
         }
 
-        public int getQuantity()
+        public int GetQuantity()
         {
             return this.quantity;
         }
 
-        public double getUnitPrice()
+        public double GetUnitPrice()
         {
             return this.unitPrice;
         }
+
+        public string ToString()
+        {
+            string s = this.barcode + ATTR_SEP + this.productName + ATTR_SEP + this.quantity
+                    + ATTR_SEP + this.unitPrice + ATTR_SEP + this.category;
+            return s.ToLower();
+        }
+
     }
 }

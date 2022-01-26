@@ -13,4 +13,8 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SBS_CSharpTask\SBS_CSharpTask.csproj" />
+  </ItemGroup>
+
 </Project>

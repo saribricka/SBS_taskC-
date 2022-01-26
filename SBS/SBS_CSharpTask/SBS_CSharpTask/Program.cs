@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SBS_CSharpTask.Controller.Product;
+using System;
 
 namespace SBS_CSharpTask
 {
@@ -6,7 +7,7 @@ namespace SBS_CSharpTask
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ItemController itemController = new ItemControllerImpl();
         }
     }
 }
